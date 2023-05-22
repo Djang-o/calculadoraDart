@@ -21,18 +21,13 @@ converter(String numA) {
 }
 
 calcular(int numA, int numB, op) {
-  int? resul;
-  if (op == "+") {
-    resul = numA + numB;
-    return resul;
-  } else if (op == "-") {
-    resul = numA - numB;
-    return resul;
-  } else if (op == "*") {
-    resul = numA * numB;
-    return resul;
-  } else if (op == "/") {
-    resul = numA ~/ numB;
-    return resul;
-  }
+  return op == "+"
+      ? numA + numB
+      : op == "-"
+          ? numA - numB
+          : op == "*"
+              ? numA * numB
+              : op == "/"
+                  ? numA ~/ numB
+                  : null;
 }
